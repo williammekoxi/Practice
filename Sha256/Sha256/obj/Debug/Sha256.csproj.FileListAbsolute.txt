@@ -1,0 +1,6 @@
+C:\Projects\git\Practice\Sha256\Sha256\bin\Debug\Sha256.exe.config
+C:\Projects\git\Practice\Sha256\Sha256\bin\Debug\Sha256.exe
+C:\Projects\git\Practice\Sha256\Sha256\bin\Debug\Sha256.pdb
+C:\Projects\git\Practice\Sha256\Sha256\obj\Debug\Sha256.csprojResolveAssemblyReference.cache
+C:\Projects\git\Practice\Sha256\Sha256\obj\Debug\Sha256.exe
+C:\Projects\git\Practice\Sha256\Sha256\obj\Debug\Sha256.pdb
