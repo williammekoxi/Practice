@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html ng-app="reportApp">
+<html>
   <head>
     <title>{{title}}</title>
     <script type="text/javascript" src="/javascripts/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/javascripts/angular-1.5.8.js"></script>
     <script type="text/javascript" src="/javascripts/date-util.js"></script>
-    <script type="text/javascript">
-    var reportApp = angular.module('reportApp', []);
-    </script>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="/jquery-ui/jquery-ui.min.css" />
   </head>
   <body class="body">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header navbar-brand">
-          <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-          {{title}}
-        </div>
+      <div class="navbar-header navbar-brand">
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        {{title}}
       </div>
+
+      <form class="navbar-form navbar-right">
+        <div class="input-group">
+          <div class="input-group-addon">scope: /</div>
+          <input type="text" class="form-control" placeholder="base path" />
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="keyword" />
+          <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+        </div>
+      </form>
     </nav>
 
     {{{body}}}
 
     <hr />
     <footer>
-      <div class="container">
-        <p>© 2016 Huazhu</p>
-      </div>
+      <p>© 2016 Hui</p>
     </footer>
   </body>
 </html>
