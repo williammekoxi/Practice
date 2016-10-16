@@ -157,7 +157,7 @@
 $(function() {
   // toggle option panel
   $('#showHideFilterPanelButton').click(function() {
-    $('#filterPanel').toggle(200);
+    $('#filterPanel').toggle(100);
     $('#bodyTop').toggleClass('bodyTop');
     if (!$('#bodyTop').hasClass('bodyTop')) {
       $.cookie('optPl', '1', { expires: 365, path: '/' });
