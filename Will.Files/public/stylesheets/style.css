@@ -2,6 +2,11 @@
 build .css file from .less file
 > lessc style.less style.css
 */
+body {
+  min-width: 992px;
+  width: auto !important;
+  width: 992px;
+}
 .bodyTop {
-  padding-top: 50px;
+  padding-top: 60px;
 }
