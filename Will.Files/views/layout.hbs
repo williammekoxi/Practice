@@ -6,8 +6,11 @@
     <script type="text/javascript" src="/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/javascripts/angular-1.5.8.js"></script>
     <script type="text/javascript" src="/javascripts/date-util.js"></script>
+    <script type="text/javascript" src="/jquery.cookie/jquery.cookie.js"></script>
+    <!--script type="text/javascript" src="/bootstrap-checkbox/bootstrap-checkbox.js" defer></script-->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body class="body">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -16,17 +19,132 @@
         {{title}}
       </div>
 
-      <form class="navbar-form navbar-right">
-        <div class="input-group">
-          <div class="input-group-addon">scope: /</div>
-          <input type="text" class="form-control" placeholder="base path" />
-        </div>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="keyword" />
+      <form class="navbar-form navbar-right form-inline nowrap">
+        <div class="form-group has-feedback">
+          <div class="input-group">
+            <div class="input-group-addon">scope: /</div>
+            <input id="basePathInput" type="text" class="form-control" placeholder="base path" />
+          </div>
+          <input id="keywordInput" type="text" class="form-control" placeholder="keyword" />
           <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+        </div>
+
+        <div class="input-group">
+          <button id="showHideFilterPanelButton" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+          </button>
         </div>
       </form>
     </nav>
+
+    <div class="jumbotron" id="filterPanel">
+      <h3>options</h3>
+      <hr />
+
+      <div class="container">
+        <div class="row form-horizontal">
+          <div class="checkbox col-md-12">
+            <h4>
+              <label>
+                <input id="fileTypeHeader" type="checkbox" value="">file types
+              </label>
+            </h4>
+          </div>
+        </div>
+        <div id="fileTypePanel" class="row form-horizontal">
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+          <div class="checkbox col-md-1 col-sm-3">
+            <label>
+              <input type="checkbox" value="">.txt
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
 
     {{{body}}}
 
@@ -34,5 +152,35 @@
     <footer>
       <p>© 2016 Hui</p>
     </footer>
+
+<script type="text/javascript">
+$(function() {
+  // toggle option panel
+  $('#showHideFilterPanelButton').click(function() {
+    $('#filterPanel').toggle(200);
+    $('#bodyTop').toggleClass('bodyTop');
+    if (!$('#bodyTop').hasClass('bodyTop')) {
+      $.cookie('optPl', '1', { expires: 365, path: '/' });
+    } else {
+      $.removeCookie('optPl');
+    }
+  });
+  if ($.cookie('optPl') != '1') {
+    $('#filterPanel').toggle();
+    $('#bodyTop').toggleClass("bodyTop");
+  }
+
+  // $(':checkbox').checkboxpicker(); // bootstrap-checkbox.js
+
+  // check all file types
+  $('#fileTypeHeader').change(function() {
+    $('#fileTypePanel :checkbox').prop('checked', $(this).prop('checked'));
+  });
+  $('#fileTypePanel :checkbox').change(function() {
+    $('#fileTypeHeader').prop('checked', ($('#fileTypePanel :checkbox:not(:checked)').length < 1))
+  });
+})
+</script>
+
   </body>
 </html>
