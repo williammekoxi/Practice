@@ -13,3 +13,9 @@ body {
 .fileTypePanel {
   width: 36px !important;
 }
+.scopeForm {
+  width: 580px !important;
+}
+.fileContentPanel {
+  display: none;
+}

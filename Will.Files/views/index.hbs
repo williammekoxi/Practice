@@ -1,12 +1,12 @@
 <div id="bodyTop" class="container-fluid">
 
-	<div class="panel panel-default">
+	<div class="panel panel-default fileItemPanel">
 		<div class="panel-heading">
 			<form class="form-inline form-horizontal">
-				<button type="button" class="btn btn-default">
+				<button type="button" class="btn btn-default fileOpenBtn">
 					<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
 				</button>
-				<div class="input-group col-md-8">
+				<div class="input-group col-md-10 col-sm-9">
 					<span class="fileTypePanel input-group-addon">@</span>
 					<input type="text" class="form-control" placeholder="file path" />
 				</div>
@@ -20,18 +20,18 @@
 				</div>
 			</form>
 		</div>
-		<div class="panel-body">
-			some content
+		<div class="panel-body fileContentPanel">
+			some content 01
 		</div>
 	</div>
 
-	<div class="panel panel-default">
+	<div class="panel panel-default fileItemPanel">
 		<div class="panel-heading">
 			<form class="form-inline form-horizontal">
-				<button type="button" class="btn btn-default">
+				<button type="button" class="btn btn-default fileOpenBtn">
 					<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
 				</button>
-				<div class="input-group col-md-8">
+				<div class="input-group col-md-10 col-sm-9">
 					<span class="fileTypePanel input-group-addon">@</span>
 					<input type="text" class="form-control" placeholder="file path" />
 				</div>
@@ -45,12 +45,83 @@
 				</div>
 			</form>
 		</div>
-		<div class="panel-body">
-			some content
+		<div class="panel-body fileContentPanel">
+			some content 02
+		</div>
+	</div>
+
+	<div class="panel panel-default fileItemPanel">
+		<div class="panel-heading">
+			<form class="form-inline form-horizontal">
+				<button type="button" class="btn btn-default fileOpenBtn">
+					<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				</button>
+				<div class="input-group col-md-10 col-sm-9">
+					<span class="fileTypePanel input-group-addon">@</span>
+					<input type="text" class="form-control" placeholder="file path" />
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="panel-body fileContentPanel">
+			some content 03
+		</div>
+	</div>
+
+	<div class="panel panel-default fileItemPanel">
+		<div class="panel-heading">
+			<form class="form-inline form-horizontal">
+				<button type="button" class="btn btn-default fileOpenBtn">
+					<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				</button>
+				<div class="input-group col-md-10 col-sm-9">
+					<span class="fileTypePanel input-group-addon">@</span>
+					<input type="text" class="form-control" placeholder="file path" />
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="panel-body fileContentPanel">
+			some content 04
 		</div>
 	</div>
 
 </div>
 
 <script type="text/javascript">
+$(function() {
+	bindEvents();
+});
+
+function bindEvents() {
+	$('.fileOpenBtn').click(function() {
+		var fileItemPanel = $(this).closest('.fileItemPanel')
+		var fileContentPanel = fileItemPanel.find('.fileContentPanel');
+		if (fileContentPanel.is(":visible")) {
+			fileContentPanel.hide(100);
+			$(this).find('.glyphicon').switchClass('glyphicon-triangle-bottom', 'glyphicon-triangle-right', 50);
+			fileItemPanel.switchClass('panel-primary', 'panel-default', 50);
+		} else {
+			fileContentPanel.show(100);
+			$(this).find('.glyphicon').switchClass('glyphicon-triangle-right', 'glyphicon-triangle-bottom', 50);
+			fileItemPanel.switchClass('panel-default', 'panel-primary', 50);
+		}
+	});
+}
+
+
 </script>
