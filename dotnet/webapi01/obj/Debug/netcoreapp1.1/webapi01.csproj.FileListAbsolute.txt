@@ -1,0 +1,8 @@
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/bin/Debug/netcoreapp1.1/webapi01.deps.json
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/bin/Debug/netcoreapp1.1/webapi01.runtimeconfig.json
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/bin/Debug/netcoreapp1.1/webapi01.runtimeconfig.dev.json
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/bin/Debug/netcoreapp1.1/webapi01.dll
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/bin/Debug/netcoreapp1.1/webapi01.pdb
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/obj/Debug/netcoreapp1.1/webapi01.AssemblyInfo.cs
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/obj/Debug/netcoreapp1.1/webapi01.dll
+/Users/will/Documents/Projects/git/Practice/dotnet/webapi01/obj/Debug/netcoreapp1.1/webapi01.pdb

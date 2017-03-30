@@ -1,0 +1,8 @@
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/bin/Debug/netcoreapp1.1/aspnetcoreapp01.deps.json
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/bin/Debug/netcoreapp1.1/aspnetcoreapp01.runtimeconfig.json
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/bin/Debug/netcoreapp1.1/aspnetcoreapp01.runtimeconfig.dev.json
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/bin/Debug/netcoreapp1.1/aspnetcoreapp01.dll
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/bin/Debug/netcoreapp1.1/aspnetcoreapp01.pdb
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/obj/Debug/netcoreapp1.1/aspnetcoreapp01.AssemblyInfo.cs
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/obj/Debug/netcoreapp1.1/aspnetcoreapp01.dll
+/Users/will/Documents/Projects/git/Practice/aspnetcoreapp01/obj/Debug/netcoreapp1.1/aspnetcoreapp01.pdb

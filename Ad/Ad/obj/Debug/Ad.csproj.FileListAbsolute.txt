@@ -1,0 +1,6 @@
+C:\Projects\git\Practice\Ad\Ad\bin\Debug\Ad.exe.config
+C:\Projects\git\Practice\Ad\Ad\bin\Debug\Ad.exe
+C:\Projects\git\Practice\Ad\Ad\bin\Debug\Ad.pdb
+C:\Projects\git\Practice\Ad\Ad\obj\Debug\Ad.csprojResolveAssemblyReference.cache
+C:\Projects\git\Practice\Ad\Ad\obj\Debug\Ad.exe
+C:\Projects\git\Practice\Ad\Ad\obj\Debug\Ad.pdb
